@@ -41,8 +41,13 @@ public class StatsService {
     }
 
     public int minAverageSales(int[] sales) {
+        int average = 0;
+        int sum = 0;
+        for (int i = 0; i < sales.length; i++) {
+            sum = sum + sales[i];
+            average = sum / sales.length;
+        }
         int countMin = 0;
-        int average = 15;
         for (int s : sales) {
             if (s < average) {
                 countMin++;
@@ -52,8 +57,13 @@ public class StatsService {
     }
 
     public int maxAverageSales(int[] sales) {
+        int average = 0;
+        int sum = 0;
+        for (int i = 0; i < sales.length; i++) {
+            sum = sum + sales[i];
+            average = sum / sales.length;
+        }
         int countMax = 0;
-        int average = 15;
         for (int s : sales) {
             if (s > average) {
                 countMax++;
@@ -62,4 +72,3 @@ public class StatsService {
         return countMax;
     }
 }
-
