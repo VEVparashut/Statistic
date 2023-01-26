@@ -9,10 +9,10 @@ public class StatsServiceTest {
     public void shouldFindSum() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedSum = 180;
-        int actualSum = service.sumSales(sales);
+        long expectedSum = 180;
+        long actualSum = service.sumSales(sales);
 
         Assertions.assertEquals(expectedSum, actualSum);
     }
@@ -21,10 +21,10 @@ public class StatsServiceTest {
     public void shouldFindAverage() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedAverage = 15;
-        int actualAverage = service.averageSales(sales);
+        long expectedAverage = 15;
+        long actualAverage = service.averageSales(sales);
 
         Assertions.assertEquals(expectedAverage, actualAverage);
     }
@@ -33,10 +33,10 @@ public class StatsServiceTest {
     public void shouldFindMinMonth() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedMinMonth = 9;
-        int actualMinMonth = service.getMinSales(sales);
+        long expectedMinMonth = 9;
+        long actualMinMonth = service.getMinSales(sales);
 
         Assertions.assertEquals(expectedMinMonth, actualMinMonth);
     }
@@ -45,10 +45,10 @@ public class StatsServiceTest {
     public void shouldFindMaxMonth() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedMaxMonth = 8;
-        int actualMaxMonth = service.getMaxSales(sales);
+        long expectedMaxMonth = 8;
+        long actualMaxMonth = service.getMaxSales(sales);
 
         Assertions.assertEquals(expectedMaxMonth, actualMaxMonth);
     }
@@ -57,10 +57,10 @@ public class StatsServiceTest {
     public void shouldFindCountMonthMinAverage() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedCountMin = 5;
-        int actualCountMin = service.minAverageSales(sales);
+        long expectedCountMin = 5;
+        long actualCountMin = service.minAverageSales(sales);
 
         Assertions.assertEquals(expectedCountMin, actualCountMin);
     }
@@ -69,10 +69,10 @@ public class StatsServiceTest {
     public void shouldFindCountMonthMaxAverage() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedCountMax = 5;
-        int actualCountMax = service.maxAverageSales(sales);
+        long expectedCountMax = 5;
+        long actualCountMax = service.maxAverageSales(sales);
 
         Assertions.assertEquals(expectedCountMax, actualCountMax);
     }
